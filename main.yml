@@ -8,6 +8,6 @@
   connection: local
 
   tasks:
-  - name: do stuff
+  - name: install all the software!
     include_role:
       name: install_software
