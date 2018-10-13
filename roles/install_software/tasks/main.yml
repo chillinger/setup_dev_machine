@@ -1,0 +1,16 @@
+---
+
+- name: set up repositories
+  yum_repository: "{{ item }}"
+  with_items:
+    - name: vivaldi
+      description: vivaldi Browser repository
+      baseurl: http://repo.vivaldi.com/stable/rpm/x86_64
+      gpgkey: http://repo.vivaldi.com/stable/linux_signing_key.pub 
+
+
+- name: install software packages
+  yum: 
+        name: 
+          - vivaldi-stable
+          - git
