@@ -3,20 +3,26 @@
 - name: set up repositories
   yum_repository: "{{ item }}"
   with_items:
-    - name: vivaldi
-      description: vivaldi Browser repository
-      baseurl: http://repo.vivaldi.com/stable/rpm/x86_64
-      gpgkey: http://repo.vivaldi.com/stable/linux_signing_key.pub 
+  - name: vivaldi
+    description: vivaldi Browser repository
+    baseurl: http://repo.vivaldi.com/stable/rpm/x86_64
+    gpgkey: http://repo.vivaldi.com/stable/linux_signing_key.pub 
 
-    - name: vscode
-      description: MS Visual Studio Code
-      baseurl: https://packages.microsoft.com/yumrepos/vscode
-      gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+  - name: vscode
+    description: MS Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    
+  - name: spotify
+    description: Spotify Client
+    baseurl: https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/
+    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
 
 
 - name: install software packages
   yum: 
-        name: 
-          - vivaldi-stable
-          - git
-          - code
+    name: 
+    - vivaldi-stable
+    - git
+    - code
+    - spotify-client
