@@ -18,6 +18,11 @@
     baseurl: https://negativo17.org/repos/spotify/fedora-$releasever/$basearch/
     gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
 
+  - name: steam
+    description: steam client
+    baseurl: https://negativo17.org/repos/steam/fedora-$releasever/$basearch/
+    gpgkey: https://negativo17.org/repos/RPM-GPG-KEY-slaanesh
+
 
 - name: install software packages
   yum: 
@@ -29,6 +34,8 @@
     - keepass
     - zsh
     - seafile-client
+    - glances
+    - steam
 
 - name: install i3
   yum:
