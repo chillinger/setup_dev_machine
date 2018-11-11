@@ -10,5 +10,5 @@ installiert meine Kiste von null hoch
 
 # installieren
 
-* `ansible-galaxy main.yml`
+* `ansible-playbook main.yml`
  
