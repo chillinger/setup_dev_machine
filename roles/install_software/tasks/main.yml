@@ -47,3 +47,8 @@
     - xbacklight 
     - feh 
     - conky
+
+- name: config i3
+  copy:
+    src: config
+    dest: /home/joe/.config/i3/config

@@ -1,0 +1,7 @@
+---
+
+- name: install fontawesome
+  copy:
+    src: 'font_awesome_regular400_.otf'
+    dest: '/usr/share/fonts/font_awesome_regular400_.otf'
+  notify: 'rebuild fonts cache'

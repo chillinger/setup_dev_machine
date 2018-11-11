@@ -11,3 +11,7 @@
   - name: install all the software!
     include_role:
       name: install_software
+
+  - name: install font
+    include_role:
+      name: install_font
